@@ -56,7 +56,7 @@
           <div class="label">Payee</div>
           <div id="payee" class="value">PBG Mmindpower</div>
           <div class="label" style="margin-top:14px">UPI ID</div>
-          <div id="upiId" class="value">pbgmmindpower@upi</div>
+          <div id="upiId" class="value">mmindpower.contact@oksbi</div>
           <div class="label" style="margin-top:14px">Amount</div>
           <div id="amt" class="value">Any amount (you enter)</div>
           <div id="noteBox" style="margin-top:14px">
@@ -96,7 +96,7 @@ async function load(){
     const r = await fetch('./latest.json?'+Date.now(), {cache:'no-store'});
     const j = await r.json();
     document.getElementById('payee').textContent = j.payee_name || 'PBG Mmindpower';
-    document.getElementById('upiId').textContent = j.upi_id || 'pbgmmindpower@upi';
+    document.getElementById('upiId').textContent = j.upi_id || 'mmindpower.contact@oksbi';
     document.getElementById('note').textContent = j.note || 'PBG Payment';
     document.getElementById('updated').textContent = j.updated || new Date().toISOString();
     document.getElementById('cid').textContent = j.website_cid || 'QmdfZcz...';
